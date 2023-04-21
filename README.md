@@ -4,4 +4,8 @@
 
 ### usage: clone the repository, then launch the main.py file with python
 
-```hi```
+```python3 main.py [xyz cmf name] [camera cmf name] [source light name] [destination light name]```
+
+### example:
+
+```python3 main.py cie_1964_10 none D65 A```
