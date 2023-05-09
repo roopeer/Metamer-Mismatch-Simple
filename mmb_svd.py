@@ -25,10 +25,6 @@ def compute_mmb(ocs_Phi, obs_resp_Phi, obs_resp_Psi, illum_Phi=None, illum_Psi=N
     for direction in sample_unit_sphere(res):
         direction_mod = direction
         Psi_F = U @ direction_mod
-        #U, _, _ = SVD(cs_map_Psi)
-        #print(U.shape)
-        #print(cs_map_Phi.shape, cs_map_Psi.shape, Psi_F.shape)
-        #return []
         refl_min, refl_max  = solve_linear_program(of_cfs=Psi_F, constr=cs_map_Phi.T, constr_req=ocs_Phi, bounds=(0,1))
         cs_min_Psi = cs_map_Psi.T @ refl_min
         cs_max_Psi = cs_map_Psi.T @ refl_max
