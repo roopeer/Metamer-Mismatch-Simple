@@ -8,4 +8,4 @@
 
 ### example:
 
-```python3 main.py cie_1964_10 none D65 A```
+```python3 main.py cie_1964_10 none D65 D65```
