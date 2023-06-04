@@ -59,7 +59,7 @@ if __name__ == '__main__':
     mmb_points = compute_mmb(ocs_Phi=gc_resp_Phi, obs_resp_Phi=xyz_obs, obs_resp_Psi=nikon_obs, illum_Phi=illum_1, illum_Psi=illum_2)
     mmb_convex_hull = ConvexHull(mmb_points)
 
-    ocs_points = compute_ocs(obs_resp=xyz_obs, illum=illum_1)
+    ocs_points = compute_ocs(obs_resp=nikon_obs, illum=illum_2)
     ocs_convex_hull = ConvexHull(ocs_points)
 
     plot_convex_hulls([ocs_convex_hull, mmb_convex_hull], "mmb_plot.html")
